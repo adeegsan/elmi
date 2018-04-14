@@ -326,7 +326,7 @@ section.features .feature-item i {
 section.cta {
     position: relative;
     padding: 250px 0;
-    background-image: url(../img/bg-cta.jpg);
+    background: url(../img/bg-cta.jpg) no-repeat fixed;
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
