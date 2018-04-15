@@ -160,7 +160,7 @@ header.masthead {
     color: #fff;
     background: url(../img/bg-pattern.png), #7b4397;
     background: url(../img/bg-pattern.png), -webkit-linear-gradient(to left, #7b4397, #dc2430);
-    background: url(../img/bg-pattern.png), linear-gradient(to left, #7b4397, #06b11b)
+    background: url(../img/bg-pattern.png), linear-gradient(to left, #8952a5, #553592)
 }
 
 header.masthead .header-content {
@@ -210,7 +210,8 @@ section.download {
 }
 
 .download .container {
-    background-color: #343a406b;;
+    background-color: #343a406b;
+    ;
     padding: 100px;
     max-width: 100%;
     color: white;
@@ -222,7 +223,7 @@ section.download {
     border-radius: 7px;
     background-color: rgba(90, 90, 90, 0.34);
     padding: 2px;
-   
+
 }
 
 .current-courses p {
@@ -230,9 +231,9 @@ section.download {
 }
 
 .current-courses:hover {
-   
+
     background-color: rgba(177, 177, 177, 0.9);
-   
+
 }
 
 .icons {
@@ -298,9 +299,29 @@ section.features .device-container {
         margin-bottom: 0
     }
     .current-courses {
-    max-width: 24%;
-   
+        max-width: 24%;
+
+    }
+
+    .address {
+    background: #716565;
+    width: 20%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 19px;
 }
+}
+
+@media (max-width:740px) {
+
+    .address {
+    background: #716565;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 19px;
+}
+
 }
 
 section.features .feature-item {
@@ -351,7 +372,17 @@ section.cta .cta-content h2 {
     section.cta .cta-content h2 {
         font-size: 80px
     }
+
+    .address {
+        background: #716565;
+        width: 50%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 19px;
+    }
 }
+
+
 
 section.cta .overlay {
     position: absolute;
@@ -443,6 +474,8 @@ footer ul li a:focus,
 footer ul li a:hover {
     text-decoration: none
 }
+
+
 
 .bg-primary {
     background: url("../img/bg2.jpg") no-repeat fixed;
