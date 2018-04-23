@@ -210,8 +210,7 @@ section.download {
 }
 
 .download .container {
-    background-color: #343a406b;
-    ;
+    background-color: #004085ba;
     padding: 100px;
     max-width: 100%;
     color: white;
@@ -478,7 +477,7 @@ footer ul li a:hover {
 
 
 .bg-primary {
-    background: url("../img/bg2.jpg") no-repeat fixed;
+    background: url("../img/bgcode.png") no-repeat fixed;
     background-size: cover;
 }
 
