@@ -210,7 +210,7 @@ section.download {
 }
 
 .download .container {
-    background-color: #004085ba;
+    background-color: rgba(0, 64, 133, 0.87);
     padding: 100px;
     max-width: 100%;
     color: white;
