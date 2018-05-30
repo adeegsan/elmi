@@ -93,7 +93,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav > li > a.active {
-    color: #fdcc52!important;
+    color: #fdcc52 !important;
     background-color: transparent
 }
 
@@ -210,18 +210,60 @@ section.download {
 }
 
 .download .container {
-    background-color: rgba(0, 64, 133, 0.87);
-    padding: 100px;
+    background-color: rgba(103, 32, 139, 0.85);
+    padding: 100px 15px;
     max-width: 100%;
     color: white;
 
 }
 
-.current-courses {
-    border: 1px solid white;
-    border-radius: 7px;
-    background-color: rgba(90, 90, 90, 0.34);
-    padding: 2px;
+
+
+.card {
+
+    background-color: #f0f0f0;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    color: black;
+    margin-bottom: 2rem;
+    padding: 0;
+    transition: background-color 500ms;
+    transition: box-shadow 500ms;
+
+
+}
+
+.card:hover {
+    background-color: #ebebeb;
+    -webkit-box-shadow: 0px 0px 11px 3px rgb(163, 163, 163);
+    -moz-box-shadow: 0px 0px 11px 3px rgb(163, 163, 163);
+    box-shadow: 0px 0px 15px 5px rgb(163, 163, 163);
+}
+
+
+
+.card .card-title {
+    margin-bottom: .75rem;
+    font-weight: 400;
+    transition: background-color 500ms;
+}
+
+.card .card-text {
+    font-size: 1.15rem;
+
+}
+
+.card h5,
+.h5 {
+    font-size: 1.5rem;
+}
+
+.card img {
+
+    width: 50%;
+    max-height: 180px;
+
+
 
 }
 
@@ -303,23 +345,23 @@ section.features .device-container {
     }
 
     .address {
-    background: #716565;
-    width: 20%;
-    margin: auto;
-    padding: 10px;
-    border-radius: 19px;
-}
+        background: #716565;
+        width: 20%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 19px;
+    }
 }
 
 @media (max-width:740px) {
 
     .address {
-    background: #716565;
-    width: 90%;
-    margin: auto;
-    padding: 10px;
-    border-radius: 19px;
-}
+        background: #716565;
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 19px;
+    }
 
 }
 
