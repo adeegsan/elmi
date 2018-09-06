@@ -222,6 +222,18 @@ section.download {
     padding-left: 50px;
 }
 
+.errormsg {
+    text-align: center;
+    margin-top: 20px;
+    background: #f589892e;
+}
+
+.successmsg {
+    text-align: center;
+    margin-top: 20px;
+    background: #f589892e;
+}
+
 .card {
 
     background-color: #f0f0f0;
