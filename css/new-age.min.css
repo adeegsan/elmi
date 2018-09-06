@@ -217,7 +217,10 @@ section.download {
 
 }
 
-
+.register-form {
+    border-left: 1px solid #a9a9a95e;
+    padding-left: 50px;
+}
 
 .card {
 
