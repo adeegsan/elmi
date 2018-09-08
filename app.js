@@ -7,7 +7,7 @@ var regForm = document.getElementById('regform');
 var joinBtn = document.getElementById('join');
 var btn = document.getElementById('register');
 var success = document.getElementById('success');
-var message = "<p class='text-success successmsg'> Something Went Wrong Please Try Later.</p>";
+var message = "<p class='text-success successmsg'> We are Working on the Online Registration System, Please Try Later. Thanks for Understanding. </p>";
 var errorMsg = "<p class='text-danger errormsg'> All fields are required.</p>";
 
 
