@@ -34,4 +34,5 @@ function shakeForm(e) {
     e.preventDefault;
     regForm.classList.toggle("slideInRight");
     regForm.classList.toggle("shake");
+    return false;
 }
