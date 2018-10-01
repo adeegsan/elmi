@@ -509,15 +509,18 @@
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxrgyG_pG6uqFUSu-ov5yUw_F-seSm6SsVaumfZz7jYLaWgkbI/exec';
-        const form = document.forms['submit-to-google-sheet']
-
+        const form = document.forms['submit-to-google-sheet'];
+        
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, {
                     method: 'POST',
                     body: new FormData(form)
                 })
-                .then(response => console.log('Success!', response))
+                .then(response => {
+                    alert('Thanks: Registration completed Successfully.');
+                    form.reset();
+                })
                 .catch(error => console.error('Error!', error.message))
         })
 
