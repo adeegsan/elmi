@@ -11,7 +11,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--    Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon.ico">
@@ -25,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="css/animate.min.css" rel="stylesheet">
@@ -79,25 +79,26 @@
 
                     <!--     Form-->
 
-                    <form id="regform" role="form" action="javascript:;" class="register-form" onsubmit="insert_value()">
+                    <form id="regform" name="submit-to-google-sheet" role="form" class="register-form">
+
                         <h2>Please Register <small>for upcoming Courses.</small></h2>
                         <hr class="colorgraph">
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="first_name" id="fname" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                                    <input type="text" name="firstName" id="fname" class="form-control input-lg" placeholder="First Name" tabindex="1">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="last_name" id="lname" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+                                    <input type="text" name="lastName" id="lname" class="form-control input-lg" placeholder="Last Name" tabindex="2">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="phone" name="display_name" id="phone" class="form-control input-lg" placeholder="Phone Number" tabindex="3">
+                                    <input type="phone" name="phone" id="phone" class="form-control input-lg" placeholder="Phone Number" tabindex="3">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
@@ -111,7 +112,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <select name="" id="courses" class="form-control input-lg">
+                                    <select name="course" id="course" class="form-control input-lg">
                                         <option value="FrontEnd">Front-end HTML, CSS &amp; JavaScript</option>
                                         <option value="BackEnd">Back-end PHP &amp; MySQL</option>
                                         <option value="CCNA">Cisco CCNA (Routing &amp; Switching)
@@ -124,7 +125,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" id="level" class="form-control input-lg" placeholder="Your Education Level" tabindex="6">
+                                    <input type="text" name="education" class="form-control input-lg" placeholder="Your Education Level" tabindex="6">
                                 </div>
                             </div>
                         </div>
@@ -140,6 +141,8 @@
 
                         </div>
                     </form>
+
+
                     <!--    end Form-->
                 </div>
             </div>
@@ -503,7 +506,25 @@
         </div>
     </footer>
 
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxrgyG_pG6uqFUSu-ov5yUw_F-seSm6SsVaumfZz7jYLaWgkbI/exec';
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+
+    </script>
+
     <!-- Bootstrap core JavaScript -->
+
 
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -512,7 +533,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/new-age.min.js"></script>
-    <script src="app.js"></script>
+    <script type="application/javascript" src="app.js"></script>
 
 </body>
 

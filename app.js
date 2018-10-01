@@ -1,11 +1,14 @@
-var script_url = "https://script.google.com/macros/s/AKfycbxtALPugVG62O8fppAvitJBhzgU98fnDn-J3XXrt4rnxZFeKX_T/exec";
+
+var script_url = "https://script.google.com/macros/s/AKfycbw_qKyG_T9MsFARudDRFdR8zUsXdXWXmchgjChme8yJ7NofK_8/exec";
+
+
 function insert_value() {
     var fname = $("#fname").val();
     var lname = $("#lname").val();
     var phone = $("#phone").val();
     var email = $("#email").val();
     var level = $("#level").val();
-    var course = $("#courses option:selected").val();
+    var course = $("#course option:selected").val();
 
     var url = script_url + "?callback=ctrlq&fname=" + fname + "&lname=" + lname + "&phone=" + phone + "&email=" + email + "&level=" + level + "&course=" + course + "&action=insert";
     var request = jQuery.ajax({
