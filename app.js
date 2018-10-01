@@ -1,42 +1,4 @@
 
-var script_url = "https://script.google.com/macros/s/AKfycbw_qKyG_T9MsFARudDRFdR8zUsXdXWXmchgjChme8yJ7NofK_8/exec";
-
-
-function insert_value() {
-    var fname = $("#fname").val();
-    var lname = $("#lname").val();
-    var phone = $("#phone").val();
-    var email = $("#email").val();
-    var level = $("#level").val();
-    var course = $("#course option:selected").val();
-
-    var url = script_url + "?callback=ctrlq&fname=" + fname + "&lname=" + lname + "&phone=" + phone + "&email=" + email + "&level=" + level + "&course=" + course + "&action=insert";
-    var request = jQuery.ajax({
-        crossDomain: true,
-        url: url,
-        method: "GET",
-        dataType: "jsonp"
-    });
-
-    document.getElementById("regform").reset();
-    console.log(fname, lname, phone, email, level, course);
-}
-
-function ctrlq(e) {
-    alert('Congrats! Registered Successfully')
-}
-
-
-
-
-
-
-
-
-
-
-
-
 //var fname = document.getElementById('fname');
 //var lname = document.getElementById('lname');
 //var email = document.getElementById('email');
