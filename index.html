@@ -72,39 +72,39 @@
                     <div class="header-content mx-auto">
                         <h1 class="mb-5 animated bounceInLeft">Elmi academy is a world class IT training center in
                             Hargeisa, Somaliland. </h1>
-                        <a href="" id="join" class="btn btn-outline btn-xl js-scroll-trigger animated shake">Join Now</a>
+                        <button  id="join" class="btn btn-outline btn-xl animated shake">Join Now</button>
                     </div>
                 </div>
                 <div class="col-lg-8 my-auto">
 
                     <!--     Form-->
 
-                    <form id="regform" name="submit-to-google-sheet" role="form" class="register-form">
+                    <form id="regform" name="submit-to-google-sheet" role="form" class="animated register-form">
 
                         <h2>Please Register <small>for upcoming Courses.</small></h2>
                         <hr class="colorgraph">
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="firstName" id="fname" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                                    <input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1" required>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="lastName" id="lname" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+                                    <input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="phone" name="phone" id="phone" class="form-control input-lg" placeholder="Phone Number" tabindex="3">
+                                    <input type="phone" name="phone" id="phone" class="form-control input-lg" placeholder="Phone Number" tabindex="3" required maxlength="10" min="6">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <div class="form-group">
 
-                                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+                                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4" required>
 
                                 </div>
                             </div>
@@ -113,13 +113,16 @@
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <div class="form-group">
                                     <select name="course" id="course" class="form-control input-lg">
-                                        <option value="FrontEnd">Front-end HTML, CSS &amp; JavaScript</option>
-                                        <option value="BackEnd">Back-end PHP &amp; MySQL</option>
-                                        <option value="CCNA">Cisco CCNA (Routing &amp; Switching)
-                                        </option>
-                                        <option value="GraphicsDesign">Graphics Design with Photoshop</option>
-                                        <option value="DataAnalysis">Data Analysis with SPSS</option>
-                                        <option value="Database">Oracle Database Administrator</option>
+                                       <option value="" >Select Course</option>
+                                        <option value="IT Fundamentals">1: IT Fundamentals</option>
+                                        <option value="Advanced Excel Accounting ">2: Advanced Excel Accounting </option>
+                                        <option value="Career Development">3: Career Development</option>
+                                        <option value="C# Programming Language">4: C# Programming Language</option>
+                                        <option value="Mobile App Development Andriod">5: Mobile App Development Andriod</option>
+                                        <option value="MATLAP Programming Language">6: MATLAP Programming Language</option>
+                                        <option value="Networking CCNA RS">7: Networking CCNA RS</option>
+                                        <option value="Graphic Design and Video Editing">8: Graphic Design and Video Editing</option>
+                                        <option value="Web Development HTML5, CSS3 and JavaScript">9: Web Development HTML5, CSS3 and JavaScript</option>
                                     </select>
                                 </div>
                             </div>
@@ -506,25 +509,6 @@
         </div>
     </footer>
 
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxrgyG_pG6uqFUSu-ov5yUw_F-seSm6SsVaumfZz7jYLaWgkbI/exec';
-        const form = document.forms['submit-to-google-sheet'];
-        
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, {
-                    method: 'POST',
-                    body: new FormData(form)
-                })
-                .then(response => {
-                    alert('Thanks: Registration completed Successfully.');
-                    form.reset();
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-
-    </script>
 
     <!-- Bootstrap core JavaScript -->
 

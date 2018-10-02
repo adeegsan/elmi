@@ -557,7 +557,8 @@ footer ul li a:hover {
 .btn-outline {
     color: #fff;
     border: 1px solid;
-    border-color: #fff
+    background: #530d55;
+    border-color: #8e8e8e;
 }
 
 .btn-outline.active,
